@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M169 - Praktikum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .title, .subtitle, .footer {
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: glow 2s infinite alternate;
+        }
+        .title {
+            font-size: 3em;
+            border: 2px solid #333;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            animation: animateTitle 3s infinite;
+        }
+        .subtitle {
+            font-size: 2em;
+            background: linear-gradient(to right, #d4fc79, #96e6a1);
+        }
+        .footer {
+            font-size: 1.5em;
+            background: linear-gradient(to right, #fbc2eb, #a18cd1);
+        }
+        @keyframes animateTitle {
+            0%, 100% {
+                transform: scale(1);
+                background: linear-gradient(to right, #ffecd2, #fcb69f);
+            }
+            50% {
+                transform: scale(1.1);
+                background: linear-gradient(to right, #fcb69f, #ffecd2);
+            }
+        }
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px #fff;
+            }
+            100% {
+                box-shadow: 0 0 20px #ff6, 0 0 30px #ff6, 0 0 40px #ff6;
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .title, .subtitle, .footer {
+            animation: fadeInUp 2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">M169 - Praktikum</div>
+    <div class="subtitle">Nginx Webserver</div>
+    <div class="footer">Made by Karma Mäntschung and Lorenzo Tomaselli</div>
+</body>
+</html>
